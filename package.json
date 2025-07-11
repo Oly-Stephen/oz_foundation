@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npx tsc && vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "postinstall": "chmod +x node_modules/.bin/tsc || true"
   },
   "dependencies": {
     "react": "^18.2.0",
