@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "The OZ Settlement Foundation - Empowering People, Strengthening Communities",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
