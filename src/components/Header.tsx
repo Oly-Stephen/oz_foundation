@@ -23,30 +23,30 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 lg:h-16 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-primary-600" />
+            <Heart className="h-6 w-6 lg:h-8 lg:w-8 text-primary-600" />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">OZ Foundation</h1>
-              <p className="text-xs text-gray-600">Empowering Communities</p>
+              <h1 className="text-lg lg:text-xl font-bold text-gray-900">OZ Foundation</h1>
+              <p className="text-xs text-gray-600 hidden sm:block">Empowering Communities</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-sm lg:text-base text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('#donate')}
-              className="btn-primary"
+              className="btn-primary text-xs lg:text-sm"
             >
               Donate Now
             </button>
@@ -56,11 +56,12 @@ const Header: React.FC = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 transition-colors duration-200"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5 lg:h-6 lg:w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5 lg:h-6 lg:w-6" />
             )}
           </button>
         </div>
@@ -73,14 +74,14 @@ const Header: React.FC = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md font-medium transition-colors duration-200"
+                  className="block w-full text-left px-3 py-3 text-sm lg:text-base text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </button>
               ))}
               <button
                 onClick={() => scrollToSection('#donate')}
-                className="block w-full text-left px-3 py-2 btn-primary mt-2"
+                className="block w-full text-left px-3 py-3 btn-primary mt-2 text-sm lg:text-base"
               >
                 Donate Now
               </button>
