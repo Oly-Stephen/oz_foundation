@@ -45,23 +45,23 @@ const Contact: React.FC = () => {
               
               <div className="space-y-4 lg:space-y-6">
                 <div className="flex items-start space-x-3 lg:space-x-4">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 lg:w-6 lg:h-6 text-primary-600" />
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
                   </div>
                   <div>
                     <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-sm lg:text-base text-gray-600">780-782-8058</p>
+                    <p className="text-sm lg:text-base text-gray-700">780-782-8058</p>
                     <p className="text-xs lg:text-sm text-gray-500">Available during business hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3 lg:space-x-4">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 lg:w-6 lg:h-6 text-secondary-600" />
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
                   </div>
                   <div>
                     <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Address</h4>
-                    <p className="text-sm lg:text-base text-gray-600">
+                    <p className="text-sm lg:text-base text-gray-700">
                       9c - 17728 81 Ave NW<br />
                       Edmonton, AB, T5T 1M1
                     </p>
@@ -70,23 +70,23 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-3 lg:space-x-4">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 lg:w-6 lg:h-6 text-accent-600" />
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
                   </div>
                   <div>
                     <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-sm lg:text-base text-gray-600">info@ozfoundation.ca</p>
+                    <p className="text-sm lg:text-base text-gray-700">info@ozfoundation.ca</p>
                     <p className="text-xs lg:text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3 lg:space-x-4">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 lg:w-6 lg:h-6 text-primary-600" />
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
                   </div>
                   <div>
                     <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Business Hours</h4>
-                    <p className="text-sm lg:text-base text-gray-600">
+                    <p className="text-sm lg:text-base text-gray-700">
                       Monday - Friday: 9:00 AM - 5:00 PM<br />
                       Saturday: 10:00 AM - 2:00 PM<br />
                       Sunday: Closed
@@ -101,8 +101,8 @@ const Contact: React.FC = () => {
               <h4 className="text-lg lg:text-xl font-bold text-gray-900 mb-3 lg:mb-4">Contact Person</h4>
               <div className="space-y-1 lg:space-y-2">
                 <p className="text-base lg:text-lg font-semibold text-gray-900">David Oziegbe</p>
-                <p className="text-sm lg:text-base text-gray-600">Executive Director</p>
-                <p className="text-xs lg:text-sm text-gray-500">The OZ Settlement Foundation</p>
+                <p className="text-sm lg:text-base text-gray-700">Executive Director</p>
+                <p className="text-xs lg:text-sm text-gray-600">The OZ Settlement Foundation</p>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full btn-primary flex items-center justify-center space-x-2 text-sm lg:text-base"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center space-x-2 text-sm lg:text-base"
               >
                 <Send className="w-4 h-4 lg:w-5 lg:h-5" />
                 <span>Send Message</span>
@@ -190,13 +190,26 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Map Placeholder */}
+        {/* Location */}
         <div className="mt-12 lg:mt-16">
-          <div className="bg-gray-200 rounded-xl h-48 lg:h-64 flex items-center justify-center">
+          <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 text-center">
+            Find Us
+          </h3>
+          <div className="rounded-lg overflow-hidden shadow-md bg-white flex items-center justify-center p-8 border border-gray-200">
             <div className="text-center">
-              <MapPin className="w-8 h-8 lg:w-12 lg:h-12 text-gray-400 mx-auto mb-3 lg:mb-4" />
-              <p className="text-sm lg:text-base text-gray-600">Interactive map would be embedded here</p>
-              <p className="text-xs lg:text-sm text-gray-500">9c - 17728 81 Ave NW, Edmonton, AB</p>
+              <MapPin className="w-12 h-12 lg:w-16 lg:h-16 text-yellow-500 mx-auto mb-4" />
+              <h4 className="text-gray-900 text-xl mb-2 font-semibold">The OZ Settlement Foundation</h4>
+              <p className="text-gray-700 mb-1">9c - 17728 81 Ave NW, Edmonton, AB, T5T 1M1</p>
+              <p className="text-sm text-gray-500 mb-4">Alberta, Canada</p>
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=53.5125,-113.6071" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-lg transition-all duration-200 inline-flex items-center"
+              >
+                <MapPin className="w-4 h-4 mr-2" />
+                Get Directions
+              </a>
             </div>
           </div>
         </div>

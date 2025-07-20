@@ -22,13 +22,7 @@ const About: React.FC = () => {
             </h3>
             <div className="space-y-3 lg:space-y-4 text-base lg:text-lg text-gray-700">
               <p>
-                Support community settlement and growth by providing essential resources and guidance to newcomers and residents in Alberta.
-              </p>
-              <p>
-                Empower individuals through education and resources for success, helping them build sustainable futures for themselves and their families.
-              </p>
-              <p>
-                Equip Albertans with the information and tools they need to thrive in their communities and access daily living resources.
+                Support and empower Albertans by providing essential resources, education, and guidance to help them thrive and build sustainable futures.
               </p>
             </div>
           </div>
@@ -76,19 +70,6 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Inspirational Quote */}
-        <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl lg:rounded-2xl p-6 lg:p-8 md:p-12">
-          <div className="text-center max-w-4xl mx-auto">
-            <Quote className="w-8 h-8 lg:w-12 lg:h-12 text-primary-600 mx-auto mb-4 lg:mb-6" />
-            <blockquote className="text-xl sm:text-2xl lg:text-3xl font-serif text-gray-800 mb-4 lg:mb-6 italic">
-              "The best way to find yourself is to lose yourself in service."
-            </blockquote>
-            <cite className="text-base lg:text-lg text-gray-600 font-medium">
-              — Mahatma Gandhi
-            </cite>
           </div>
         </div>
       </div>

@@ -45,11 +45,11 @@ const Donation: React.FC = () => {
     <section id="donate" className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
             How You Can Help
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Every contribution supports critical resources. No donation is too small to make a difference.
+          <p className="text-lg sm:text-xl text-black text-opacity-80 max-w-3xl mx-auto">
+            Every contribution supports critical resources and access to health care resources. No donation is too small to make a difference.
           </p>
         </div>
 
@@ -57,11 +57,11 @@ const Donation: React.FC = () => {
           {/* Donation Section */}
           <div className="space-y-6 lg:space-y-8">
             <div className="text-center">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Make a Donation
+              <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">
+                Donate Now
               </h3>
-              <p className="text-base lg:text-lg text-gray-600 mb-6 lg:mb-8">
-                Every contribution supports critical resources and helps us provide a hand up, not a handout.
+              <p className="text-base lg:text-lg text-black text-opacity-80 mb-6 lg:mb-8">
+                Every contribution supports critical resources, access to health care resources, and helps us provide a hand up, not a handout.
               </p>
             </div>
 
@@ -74,8 +74,8 @@ const Donation: React.FC = () => {
                     onClick={() => setSelectedAmount(amount.value)}
                     className={`p-3 lg:p-4 rounded-lg border-2 font-semibold transition-all duration-200 text-sm lg:text-base ${
                       selectedAmount === amount.value
-                        ? 'border-primary-600 bg-primary-50 text-primary-700'
-                        : 'border-gray-300 text-gray-700 hover:border-primary-300 hover:bg-primary-50'
+                        ? 'border-yellow-600 bg-yellow-50 text-black'
+                        : 'border-black border-opacity-20 text-black hover:border-yellow-300 hover:bg-yellow-50'
                     }`}
                   >
                     {amount.label}
@@ -85,7 +85,7 @@ const Donation: React.FC = () => {
 
               {selectedAmount === 'custom' && (
                 <div className="space-y-2">
-                  <label htmlFor="customAmount" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="customAmount" className="block text-sm font-medium text-black">
                     Enter custom amount
                   </label>
                   <input
@@ -94,14 +94,14 @@ const Donation: React.FC = () => {
                     value={customAmount}
                     onChange={(e) => setCustomAmount(e.target.value)}
                     placeholder="Enter amount"
-                    className="w-full px-3 lg:px-4 py-2 lg:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm lg:text-base"
+                    className="w-full px-3 lg:px-4 py-2 lg:py-3 border border-yellow-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 text-sm lg:text-base"
                   />
                 </div>
               )}
 
               <button
                 onClick={handleDonation}
-                className="w-full btn-primary flex items-center justify-center space-x-2 text-sm lg:text-base"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 text-sm lg:text-base"
               >
                 <DollarSign className="w-4 h-4 lg:w-5 lg:h-5" />
                 <span>
@@ -109,7 +109,7 @@ const Donation: React.FC = () => {
                 </span>
               </button>
 
-              <p className="text-xs lg:text-sm text-gray-500 text-center">
+              <p className="text-xs lg:text-sm text-black text-opacity-70 text-center">
                 Your donation is tax-deductible and will directly support our programs.
               </p>
             </div>
@@ -118,30 +118,30 @@ const Donation: React.FC = () => {
           {/* Volunteer Section */}
           <div className="space-y-6 lg:space-y-8">
             <div className="text-center">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">
                 Volunteer Your Time
               </h3>
-              <p className="text-base lg:text-lg text-gray-600 mb-6 lg:mb-8">
+              <p className="text-base lg:text-lg text-black text-opacity-80 mb-6 lg:mb-8">
                 Volunteers are crucial to our mission. Help guide others to services and support.
               </p>
             </div>
 
             <div className="space-y-4 lg:space-y-6">
               {volunteerOpportunities.map((opportunity, index) => (
-                <div key={index} className="card p-4 lg:p-6">
+                <div key={index} className="card p-4 lg:p-6 bg-white shadow-sm rounded-lg border border-black border-opacity-10">
                   <div className="flex items-start space-x-3 lg:space-x-4">
-                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <opportunity.icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary-600" />
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <opportunity.icon className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-700" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">
+                      <h4 className="text-lg lg:text-xl font-semibold text-black mb-2">
                         {opportunity.title}
                       </h4>
-                      <p className="text-sm lg:text-base text-gray-600 mb-2 lg:mb-3">
+                      <p className="text-sm lg:text-base text-black text-opacity-80 mb-2 lg:mb-3">
                         {opportunity.description}
                       </p>
-                      <div className="flex items-center text-xs lg:text-sm text-gray-500">
-                        <Clock className="w-3 h-3 lg:w-4 lg:h-4 mr-2" />
+                      <div className="flex items-center text-xs lg:text-sm text-black text-opacity-70">
+                        <Clock className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-yellow-700" />
                         {opportunity.time}
                       </div>
                     </div>
@@ -149,8 +149,8 @@ const Donation: React.FC = () => {
                 </div>
               ))}
 
-              <button className="w-full btn-outline flex items-center justify-center space-x-2 text-sm lg:text-base">
-                <Users className="w-4 h-4 lg:w-5 lg:h-5" />
+              <button className="w-full border-2 border-yellow-500 text-black hover:bg-yellow-50 font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 text-sm lg:text-base">
+                <Users className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-700" />
                 <span>Become a Volunteer</span>
               </button>
             </div>
@@ -159,42 +159,42 @@ const Donation: React.FC = () => {
 
         {/* Partnership Section */}
         <div className="mt-12 lg:mt-16">
-          <div className="bg-gradient-to-r from-secondary-50 to-accent-50 rounded-xl lg:rounded-2xl p-6 lg:p-8 md:p-12">
+          <div className="bg-black bg-opacity-5 rounded-xl lg:rounded-2xl p-6 lg:p-8 md:p-12 border border-black border-opacity-10">
             <div className="text-center">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">
                 Partner with Us
               </h3>
-              <p className="text-lg lg:text-xl text-gray-600 mb-6 lg:mb-8 max-w-3xl mx-auto">
+              <p className="text-base lg:text-lg text-black text-opacity-80 mb-6 lg:mb-8 max-w-3xl mx-auto">
                 Collaborate with local businesses, schools, and organizations to extend community impact and create lasting change.
               </p>
               
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-6 lg:mb-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
-                    <Users2 className="w-6 h-6 lg:w-8 lg:h-8 text-primary-600" />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8 lg:mb-10">
+                <div className="text-center p-4 lg:p-5 bg-white rounded-lg shadow-sm border border-black border-opacity-10">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-yellow-500 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                    <Users2 className="w-6 h-6 lg:w-8 lg:h-8 text-yellow-700" />
                   </div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">Business Partnerships</h4>
-                  <p className="text-sm lg:text-base text-gray-600">Collaborate with local businesses</p>
+                  <h4 className="text-lg lg:text-xl font-semibold text-black mb-2">Business Partnerships</h4>
+                  <p className="text-sm lg:text-base text-black text-opacity-80">Collaborate with local businesses</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
-                    <Gift className="w-6 h-6 lg:w-8 lg:h-8 text-secondary-600" />
+                <div className="text-center p-4 lg:p-5 bg-white rounded-lg shadow-sm border border-black border-opacity-10">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-yellow-500 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                    <Gift className="w-6 h-6 lg:w-8 lg:h-8 text-yellow-700" />
                   </div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">School Collaborations</h4>
-                  <p className="text-sm lg:text-base text-gray-600">Work with educational institutions</p>
+                  <h4 className="text-lg lg:text-xl font-semibold text-black mb-2">School Collaborations</h4>
+                  <p className="text-sm lg:text-base text-black text-opacity-80">Work with educational institutions</p>
                 </div>
                 
-                <div className="text-center sm:col-span-2 lg:col-span-1">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
-                    <Users className="w-6 h-6 lg:w-8 lg:h-8 text-accent-600" />
+                <div className="text-center sm:col-span-2 lg:col-span-1 p-4 lg:p-5 bg-white rounded-lg shadow-sm border border-black border-opacity-10">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-yellow-500 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                    <Users className="w-6 h-6 lg:w-8 lg:h-8 text-yellow-700" />
                   </div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">Community Organizations</h4>
-                  <p className="text-sm lg:text-base text-gray-600">Extend community impact</p>
+                  <h4 className="text-lg lg:text-xl font-semibold text-black mb-2">Community Organizations</h4>
+                  <p className="text-sm lg:text-base text-black text-opacity-80">Extend community impact</p>
                 </div>
               </div>
 
-              <button className="btn-secondary text-sm lg:text-base">
+              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-3 px-6 rounded-lg transition-all duration-200 text-sm lg:text-base">
                 Become a Partner
               </button>
             </div>
