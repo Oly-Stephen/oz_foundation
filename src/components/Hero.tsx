@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center px-3 py-2 lg:px-4 lg:py-2 rounded-full bg-yellow-100 text-yellow-700 text-xs lg:text-sm font-medium">
                 <img 
-                  src="/oz_logo.png" 
+                  src="/oz_logo_black.png" 
                   alt="OZ Foundation Logo" 
                   className="w-4 h-4 lg:w-5 lg:h-5 mr-2" 
                 />
@@ -157,4 +157,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

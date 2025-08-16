@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
+// Local type to satisfy TS for Vite's import.meta.env
+// This avoids editing global env.d.ts and keeps component self-contained.
+interface ViteImportMeta extends ImportMeta {
+  env: Record<string, string> & { BASE_URL?: string };
+}
+
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { BASE_URL = '/' } = (import.meta as ViteImportMeta).env;
+  const logoSrc = `${BASE_URL}oz_logo_black.png`;
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -30,10 +38,21 @@ const Header: React.FC = () => {
             onClick={() => scrollToSection('#home')}
           >
             <img 
-              src="/oz_logo.png" 
+              src={logoSrc}
               alt="OZ Foundation Logo" 
               className="h-10 w-auto lg:h-14 object-contain"
               title="OZ Settlement Foundation - Empowering Communities"
+              onError={(e) => {
+                const t = e.currentTarget as HTMLImageElement;
+                // Fallback to relative path, then to favicon as last resort
+                if (!t.dataset.fallback) {
+                  t.dataset.fallback = '1';
+                  t.src = 'oz_logo_black.png';
+                } else if (t.dataset.fallback === '1') {
+                  t.dataset.fallback = '2';
+                  t.src = '/favicon.ico';
+                }
+              }}
             />
           </div>
 
@@ -97,4 +116,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;
