@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Mail, Clock, Send } from 'lucide-react';
+import { Phone, MapPin, Mail, Clock, Send, Instagram } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -62,10 +62,8 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Address</h4>
                     <p className="text-sm lg:text-base text-gray-700">
-                      9c - 17728 81 Ave NW<br />
-                      Edmonton, AB, T5T 1M1
+                      Edmonton, AB, Canada
                     </p>
-                    <p className="text-xs lg:text-sm text-gray-500">Alberta, Canada</p>
                   </div>
                 </div>
 
@@ -75,8 +73,21 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-sm lg:text-base text-gray-700">info@ozfoundation.ca</p>
+                    <p className="text-sm lg:text-base text-gray-700">theozfoundationinfo@gmail.com</p>
                     <p className="text-xs lg:text-sm text-gray-500">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3 lg:space-x-4">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Instagram className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
+                  </div>
+                  <div>
+                    <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-1">Instagram</h4>
+                    <a href="https://www.instagram.com/theozfoundation/" target="_blank" rel="noopener noreferrer" className="text-sm lg:text-base text-gray-700">
+                      @theozfoundation
+                    </a>
+                    <p className="text-xs lg:text-sm text-gray-500">Follow us for updates</p>
                   </div>
                 </div>
 
@@ -190,32 +201,11 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Location */}
-        <div className="mt-12 lg:mt-16">
-          <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 text-center">
-            Find Us
-          </h3>
-          <div className="rounded-lg overflow-hidden shadow-md bg-white flex items-center justify-center p-8 border border-gray-200">
-            <div className="text-center">
-              <MapPin className="w-12 h-12 lg:w-16 lg:h-16 text-yellow-500 mx-auto mb-4" />
-              <h4 className="text-gray-900 text-xl mb-2 font-semibold">The OZ Settlement Foundation</h4>
-              <p className="text-gray-700 mb-1">9c - 17728 81 Ave NW, Edmonton, AB, T5T 1M1</p>
-              <p className="text-sm text-gray-500 mb-4">Alberta, Canada</p>
-              <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=53.5125,-113.6071" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-lg transition-all duration-200 inline-flex items-center"
-              >
-                <MapPin className="w-4 h-4 mr-2" />
-                Get Directions
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Removed 'Find Us' section as requested */}
+        
       </div>
     </section>
   );
 };
 
-export default Contact; 
+export default Contact;

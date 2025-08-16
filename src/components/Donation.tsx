@@ -48,6 +48,9 @@ const Donation: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
             How You Can Help
           </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            A hand up, not a hand out
+          </p>
           <p className="text-lg sm:text-xl text-black text-opacity-80 max-w-3xl mx-auto">
             Every contribution supports critical resources and access to health care resources. No donation is too small to make a difference.
           </p>
@@ -58,7 +61,7 @@ const Donation: React.FC = () => {
           <div className="space-y-6 lg:space-y-8">
             <div className="text-center">
               <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">
-                Donate Now
+                Support Our Mission
               </h3>
               <p className="text-base lg:text-lg text-black text-opacity-80 mb-6 lg:mb-8">
                 Every contribution supports critical resources, access to health care resources, and helps us provide a hand up, not a handout.
@@ -194,9 +197,7 @@ const Donation: React.FC = () => {
                 </div>
               </div>
 
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-3 px-6 rounded-lg transition-all duration-200 text-sm lg:text-base">
-                Become a Partner
-              </button>
+
             </div>
           </div>
         </div>

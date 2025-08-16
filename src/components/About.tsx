@@ -1,75 +1,48 @@
 import React from 'react';
-import { Quote, Target, Users, Heart } from 'lucide-react';
+import { Target, DollarSign, GraduationCap, Stethoscope } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
     <section id="about" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            About The OZ Settlement Foundation
+        <div className="text-center mb-8 lg:mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-3">
+            Mission Statement
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            We are dedicated to supporting community settlement and growth, empowering individuals through education and resources for success.
-          </p>
+          <span className="block h-1 w-20 bg-yellow-500 mx-auto rounded-full"></span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
-          {/* Mission Statement */}
-          <div className="space-y-4 lg:space-y-6">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-              Our Mission
-            </h3>
-            <div className="space-y-3 lg:space-y-4 text-base lg:text-lg text-gray-700">
-              <p>
-                Support and empower Albertans by providing essential resources, education, and guidance to help them thrive and build sustainable futures.
-              </p>
+        {/* Mission Card */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative rounded-2xl border border-yellow-300/60 bg-white shadow-lg p-6 md:p-10 text-center">
+            <div className="mx-auto mb-5 md:mb-6 h-12 w-12 md:h-14 md:w-14 rounded-full bg-yellow-100 flex items-center justify-center">
+              <Target className="h-6 w-6 md:h-7 md:w-7 text-yellow-700" />
             </div>
+            <p className="text-xl md:text-2xl leading-relaxed font-semibold text-black">
+              Creating an environment for people to harness resources useful for daily living.
+            </p>
           </div>
+        </div>
 
-          {/* Key Values */}
-          <div className="space-y-4 lg:space-y-6">
-            <div className="card p-4 lg:p-6">
-              <div className="flex items-start space-x-3 lg:space-x-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 lg:w-6 lg:h-6 text-primary-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">Community Support</h4>
-                  <p className="text-sm lg:text-base text-gray-600">
-                    Creating an environment for people to access daily living resources and build strong community connections.
-                  </p>
-                </div>
-              </div>
+        {/* Pillars (visual chips) */}
+        <div className="max-w-5xl mx-auto mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="flex items-center gap-3 rounded-xl border border-black/10 bg-black/5 p-4">
+            <div className="h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center">
+              <DollarSign className="h-5 w-5 text-yellow-700" />
             </div>
-
-            <div className="card p-4 lg:p-6">
-              <div className="flex items-start space-x-3 lg:space-x-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Target className="w-5 h-5 lg:w-6 lg:h-6 text-secondary-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">Education & Empowerment</h4>
-                  <p className="text-sm lg:text-base text-gray-600">
-                    Providing vital information for accessing essential services and opportunities for personal growth.
-                  </p>
-                </div>
-              </div>
+            <span className="text-sm md:text-base font-medium text-black">Financial Resources</span>
+          </div>
+          <div className="flex items-center gap-3 rounded-xl border border-black/10 bg-black/5 p-4">
+            <div className="h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center">
+              <Stethoscope className="h-5 w-5 text-yellow-700" />
             </div>
-
-            <div className="card p-4 lg:p-6">
-              <div className="flex items-start space-x-3 lg:space-x-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Heart className="w-5 h-5 lg:w-6 lg:h-6 text-accent-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">Compassionate Care</h4>
-                  <p className="text-sm lg:text-base text-gray-600">
-                    Leveraging financial resources to provide a hand up, not a handout, to those in need.
-                  </p>
-                </div>
-              </div>
+            <span className="text-sm md:text-base font-medium text-black">Health Care Resources</span>
+          </div>
+          <div className="flex items-center gap-3 rounded-xl border border-black/10 bg-black/5 p-4">
+            <div className="h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center">
+              <GraduationCap className="h-5 w-5 text-yellow-700" />
             </div>
+            <span className="text-sm md:text-base font-medium text-black">Education & Training</span>
           </div>
         </div>
       </div>
@@ -77,4 +50,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About; 
+export default About;

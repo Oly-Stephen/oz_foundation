@@ -36,13 +36,14 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-primary-400" />
-                <span className="text-sm lg:text-base text-gray-300">info@ozfoundation.ca</span>
+                <a href="mailto:theozfoundationinfo@gmail.com" className="text-sm lg:text-base text-gray-300 hover:text-white">
+                  theozfoundationinfo@gmail.com
+                </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-primary-400 mt-1" />
                 <span className="text-sm lg:text-base text-gray-300">
-                  9c - 17728 81 Ave NW<br />
-                  Edmonton, AB, T5T 1M1
+                  Edmonton, AB, Canada
                 </span>
               </div>
             </div>
@@ -104,7 +105,7 @@ const Footer: React.FC = () => {
                   onClick={() => scrollToSection('#donate')}
                   className="text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  Make a Donation
+                  Support Our Mission
                 </button>
               </li>
               <li>
@@ -137,16 +138,13 @@ const Footer: React.FC = () => {
             <div className="mt-6 lg:mt-8">
               <h5 className="text-xs lg:text-sm font-semibold mb-3 lg:mb-4">Follow Us</h5>
               <div className="flex space-x-3 lg:space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="https://www.facebook.com/theozsettlementfoundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
                   <Facebook className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  <Twitter className="w-4 h-4 lg:w-5 lg:h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="https://www.instagram.com/theozfoundation/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
                   <Instagram className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="https://www.linkedin.com/company/the-oz-settlement-foundation/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
                   <LinkedinIcon className="w-4 h-4 lg:w-5 lg:h-5" />
                 </a>
               </div>

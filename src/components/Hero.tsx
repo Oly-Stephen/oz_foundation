@@ -17,30 +17,32 @@ const Hero: React.FC = () => {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center px-3 py-2 lg:px-4 lg:py-2 rounded-full bg-yellow-100 text-yellow-700 text-xs lg:text-sm font-medium">
-                <Heart className="w-3 h-3 lg:w-4 lg:h-4 mr-2" />
-                <span className="hidden sm:inline">Empowering People, Strengthening Communities</span>
-                <span className="sm:hidden">Empowering Communities</span>
+                <img 
+                  src="/oz_logo.png" 
+                  alt="OZ Foundation Logo" 
+                  className="w-4 h-4 lg:w-5 lg:h-5 mr-2" 
+                />
+                <span>The OZ Foundation</span>
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
-                Building a{' '}
-                <span className="text-yellow-600">Brighter Future</span>
+                <span className="text-yellow-600">Empowering People,</span>
                 <br />
-                for Alberta
+                Strengthening Communities
               </h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-black text-opacity-70 leading-relaxed">
-                Supporting community settlement and growth. Empowering individuals through education and resources for success. 
-                Equipping Albertans with the information and tools they need to thrive.
+                The OZ Foundation is dedicated to creating an environment for people to harness resources useful for daily living.
+                We support community settlement and growth by empowering individuals through education and resources for success.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
-                onClick={() => scrollToSection('#donate')}
+                onClick={() => scrollToSection('#about')}
                 className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center text-sm lg:text-base"
               >
-                Make a Donation
+                About Us
                 <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
               </button>
               <button
@@ -99,8 +101,8 @@ const Hero: React.FC = () => {
                       <Heart className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-800" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-black text-sm lg:text-base">Healthcare Access</h3>
-                      <p className="text-xs lg:text-sm text-black text-opacity-70">Medical support & nutrition</p>
+                      <h3 className="font-semibold text-black text-sm lg:text-base">Healthcare Resources</h3>
+                      <p className="text-xs lg:text-sm text-black text-opacity-70">Access to health care resources</p>
                     </div>
                   </div>
                 </div>
@@ -142,8 +144,8 @@ const Hero: React.FC = () => {
                     <Heart className="w-5 h-5 text-yellow-800" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-black text-sm">Healthcare Access</h3>
-                    <p className="text-xs text-black text-opacity-70">Medical support & nutrition</p>
+                    <h3 className="font-semibold text-black text-sm">Healthcare Resources</h3>
+                    <p className="text-xs text-black text-opacity-70">Access to health care resources</p>
                   </div>
                 </div>
               </div>
